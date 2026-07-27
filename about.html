@@ -1,200 +1,101 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>여의도 마사지 링크 - 정보</title>
-    <meta name="description" content="여의도에서 마사지 고민될 때? 링크에서 형들이 직접 경험한 샵 정보, 가격, 꿀팁 다 모았어. 여의도 마사지 끝판왕, 여기 있어.">
-    <meta name="keywords" content="여의도 마사지, 여의도 마사지 링크, 여의도 스웨디시, 여의도 1인샵, 여의도 관리사, 여의도 마사지 추천, 여의도 마사지 가격">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-neon-void">
-    <link rel="canonical" href="https://t3b06-yd-massage-link-1.vercel.app/info">
-    <meta property="og:title" content="여의도 마사지 링크 - 정보">
-    <meta property="og:description" content="여의도에서 마사지 고민될 때? 링크에서 형들이 직접 경험한 샵 정보, 가격, 꿀팁 다 모았어. 여의도 마사지 끝판왕, 여기 있어.">
-    <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        html { font-size: 16px; scroll-behavior: smooth; }
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; background: #0b0b0b; color: #e0e0e0; line-height: 1.6; }
-        a { color: #ff0066; text-decoration: underline; text-underline-offset: 3px; }
-        a:hover { color: #ff4d94; }
-        ul { list-style: none; }
-        img { max-width: 100%; height: auto; display: block; }
-
-        /* === BRUTALIST CORE === */
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .section { position: relative; padding: 60px 0; border-bottom: 2px dashed #333; }
-        .section::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 80%; height: 2px; background: linear-gradient(90deg, transparent, #ff0066, transparent); }
-        h1, h2, h3 { font-weight: 800; letter-spacing: -0.03em; text-transform: uppercase; }
-        h1 { font-size: 2.8rem; color: #fff; text-shadow: 3px 3px 0 #ff0066; }
-        h2 { font-size: 2rem; color: #ff0066; margin-bottom: 1.5rem; }
-        .btn { display: inline-block; background: #ff0066; color: #0b0b0b; padding: 14px 32px; font-weight: 700; text-transform: uppercase; text-decoration: none; border: 3px solid #fff; transition: all 0.2s; }
-        .btn:hover { background: #fff; color: #0b0b0b; border-color: #ff0066; }
-
-        /* === HEADER / NAV === */
-        header { background: #111; border-bottom: 4px solid #ff0066; position: sticky; top: 0; z-index: 1000; }
-        .logo { font-size: 1.5rem; font-weight: 900; color: #fff; text-transform: uppercase; letter-spacing: 0.1em; }
-
-        /* 네비게이션 (이전 페이지와 동일) */
-        .nav-bar { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; }
-        .nav-links { display: flex; gap: 24px; align-items: center; }
-        .nav-links a { color: #ccc; text-decoration: none; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; position: relative; padding-bottom: 4px; }
-        .nav-links a:hover { color: #ff0066; }
-        .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: #ff0066; transition: width 0.3s; }
-        .nav-links a:hover::after { width: 100%; }
-        .hamburger { display: none; flex-direction: column; cursor: pointer; background: none; border: none; padding: 4px; }
-        .hamburger span { width: 28px; height: 3px; background: #fff; margin: 4px 0; transition: 0.3s; }
-        .tel-link { display: inline-block; background: #ff0066; color: #0b0b0b; padding: 8px 20px; font-weight: 700; border-radius: 0; text-decoration: none; font-size: 0.9rem; }
-        .tel-link:hover { background: #fff; color: #0b0b0b; }
-
-        /* 반응형 768px */
-        @media (max-width: 768px) {
-            .hamburger { display: flex; }
-            .nav-links { display: none; flex-direction: column; width: 100%; background: #111; padding: 20px; border-top: 2px solid #ff0066; }
-            .nav-links.active { display: flex; }
-            .nav-links a { padding: 12px 0; }
-            .tel-link { margin-top: 12px; text-align: center; }
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.5rem; }
-        }
-
-        /* 추가 컴포넌트 (정보 페이지용) */
-        .info-card { background: #1a1a1a; border: 2px solid #333; padding: 30px; margin-bottom: 30px; }
-        .info-card h3 { color: #fff; font-size: 1.3rem; margin-bottom: 12px; }
-        .info-card p { color: #bbb; margin-bottom: 8px; }
-        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media (max-width: 768px) { .info-grid { grid-template-columns: 1fr; } }
-        .faq-item { border-bottom: 1px solid #333; padding: 16px 0; }
-        .faq-item summary { font-weight: 700; color: #ff0066; cursor: pointer; font-size: 1.1rem; text-transform: uppercase; }
-        .faq-item p { margin-top: 8px; color: #ccc; }
-        .highlight { color: #ff0066; font-weight: 700; }
-        .bro-quote { background: #1a1a1a; border-left: 6px solid #ff0066; padding: 20px; margin: 30px 0; font-style: italic; color: #ddd; font-size: 1.1rem; }
-    </style>
+<meta charset="UTF-8">
+<title>여의도 마사지 링크 — 정보</title>
+<meta name="description" content="여의도 마사지에 대한 심층적인 정보를 제공합니다. 인원·시간·목적별로 세분화된 가이드와 현명한 선택을 위한 체크리스트를 만나보세요.">
+<meta name="keywords" content="여의도 마사지, 마사지 정보, 상황별 마사지 가이드, 마사지 체크리스트, 여의도 지역 마사지">
+<link rel="canonical" href="https://yeouido-body-review.program-school.online/about.html">
+<meta property="og:title" content="여의도 마사지 링크 — 정보">
+<meta property="og:description" content="여의도 마사지에 대한 심층적인 정보를 제공합니다. 인원·시간·목적별로 세분화된 가이드와 현명한 선택을 위한 체크리스트를 만나보세요.">
+<meta property="og:url" content="https://yeouido-body-review.program-school.online/about.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- Navigation -->
+<nav class="v-nav-qo92">
+  <input type="checkbox" id="t-wrap-u8jz-toggle" />
+  <label for="t-wrap-u8jz-toggle" class="v-img-iova"><span>☰</span></label>
+  <div class="q-wrap-9iuh">
+    <a href="/index.html">홈</a>
+    <a href="/compare.html">비교</a>
+    <a href="/info.html">정보</a>
+    <a href="/contact.html">문의</a>
+  </div>
+</nav>
 
 <header>
-    <div class="nav-bar container">
-        <a href="/" class="logo">여의도 마사지 링크</a>
-        <button class="hamburger" aria-label="메뉴 열기" onclick="toggleMenu()">
-            <span></span><span></span><span></span>
-        </button>
-        <nav class="nav-links">
-            <a href="/">홈</a>
-            <a href="/info" class="active">정보</a>
-            <a href="/review">리뷰</a>
-            <a href="/price">가격</a>
-            <a href="tel:010-1234-5678" class="tel-link">전화 문의</a>
-        </nav>
-    </div>
+  <h1>여의도 마사지 정보</h1>
+  <p class="subtitle">현장을 꿰뚫는 깊이 있는 인사이트, 당신만을 위한 맞춤형 가이드</p>
 </header>
 
 <main>
-    <!-- 히어로 섹션 (정보 페이지) -->
-    <section class="section" style="padding-top: 100px;">
-        <div class="container">
-            <h1>여의도 마사지<br>진짜 정보는 여기</h1>
-            <p style="font-size: 1.2rem; color: #ccc; max-width: 700px; margin: 20px 0 40px;">
-                형들, 여의도에서 마사지 고민된다고? 링크에서 직접 경험한 샵 정보, 
-                가격, 그리고 꿀팁까지 다 푼다. 마사지 고민, 여기서 끝내자.
-            </p>
-            <a href="#faq" class="btn">자주 묻는 질문 보기</a>
-        </div>
-    </section>
+  <!-- 지역 특성 -->
+  <section class="info-section">
+    <h2>여의도 지역이 제공하는 특별한 마사지 환경</h2>
+    <p>여의도는 금융 중심지인 동시에 문화와 휴식이 교차하는 특별한 공간이다. 고층 빌딩 사이에 자리 잡은 마사지 업소는 바쁜 직장인에게 빠른 회복을 제공한다. 이곳의 특수한 업무 강도와 교통 흐름은 고객이 언제, 어디서든 접근 가능한 서비스를 요구한다.</p>
+    <p>그뿐만 아니라, 여의도는 국제 회의와 전시가 자주 열리는 지역이기에 외국인 방문객도 많이 찾는다. 따라서 다국어 서비스와 다양한 문화적 배경을 고려한 맞춤형 프로그램이 점점 늘어나고 있다. 이런 환경을 정확히 이해하는 것이 현명한 선택의 첫걸음이다.</p>
+  </section>
 
-    <!-- 상세 정보 섹션 -->
-    <section class="section">
-        <div class="container">
-            <h2>여의도 마사지, 이렇게 골라</h2>
-            <div class="info-grid">
-                <div class="info-card">
-                    <h3>📍 위치는?</h3>
-                    <p>여의도는 금융 중심지라 점심시간이나 퇴근 후에 마사지 받기 딱 좋아. 
-                    특히 <span class="highlight">여의도역, 국회의사당역</span> 근처에 1인샵이 많더라. 
-                    접근성 최고!</p>
-                </div>
-                <div class="info-card">
-                    <h3>💆🏻 스웨디시 vs 타이</h3>
-                    <p>형, 스웨디시는 부드럽게 풀어주는 스타일, 타이는 좀 더 액티브한 스타일이야. 
-                    여의도는 <span class="highlight">스웨디시</span>가 인기 많고, 특히 오피스족에게 찐!</p>
-                </div>
-                <div class="info-card">
-                    <h3>💰 가격대는?</h3>
-                    <p>보통 60분 기준 6~10만원 사이. 1인샵은 개인 관리사가 운영해서 
-                    <span class="highlight">가성비 좋은 곳</span>도 많아. 링크에서 가격 비교해봐.</p>
-                </div>
-                <div class="info-card">
-                    <h3>⭐ 관리사 선택 꿀팁</h3>
-                    <p>예약할 때 <span class="highlight">후기 사진이 있는지</span> 꼭 확인해. 
-                    실물 후기 없는 곳은 피하는 게 좋아. 그리고 여성 관리사 원하면 미리 말해!</p>
-                </div>
-            </div>
+  <!-- 상황별 선택 가이드 -->
+  <section class="guide-section">
+    <h2>상황별 마사지 선택 가이드</h2>
 
-            <div class="bro-quote">
-                “형, 나 처음에 아무 데나 갔다가 후회했어. 링크에서 찐 후기 보고 가니까 
-                완전 다르더라. 여의도 마사지는 여기서 정리하고 가자.”
-            </div>
-        </div>
-    </section>
+    <article class="scenario">
+      <h3>1️⃣ 1인·짧은 시간·업무 스트레스 해소</h3>
+      <p>바쁜 직장인이라면 30분 이내의 집중형 마사지가 최적이다. 등·목 집중·전신 스트레칭을 결합한 “스피드 릴랙스” 프로그램을 권한다. 예약 전, 사전 설문으로 근골격계 이슈를 확인하고, 사전 준비운동을 최소 5분 실행한다.</p>
+      <p>이때는 개인 전용 방이 아닌 파티션이 있는 오픈형 공간을 선택해 이동 시간을 최소화한다. 결제는 모바일 즉시 결제 시스템을 활용하면 체크인 절차를 한 번에 끝낼 수 있다.</p>
+    </article>
 
-    <!-- FAQ 섹션 -->
-    <section class="section" id="faq">
-        <div class="container">
-            <h2>자주 묻는 질문</h2>
+    <article class="scenario">
+      <h3>2️⃣ 2~4인·중간 시간·팀 빌딩·휴식</h3>
+      <p>동료와 함께 라운드 테이블에 앉아 동시에 받는 “그룹 스파”는 팀 결속을 강화한다. 60분 정도의 세션에 아로마 테라피와 스트레칭을 병행하면 혈액 순환과 정신 집중을 동시에 끌어올린다.</p>
+      <p>이때는 사전 예약 시 “팀 할인” 옵션을 확인하고, 사전 영양 상담을 받아 몸 상태에 맞는 오일을 선택한다. 사전에 팀원들의 알레르기 정보를 공유하면 서비스 중 불편함을 방지할 수 있다.</p>
+    </article>
 
-            <div class="faq-item">
-                <details>
-                    <summary>여의도 1인샵이 뭐야?</summary>
-                    <p>관리사 한 분이 직접 운영하는 작은 샵이야. 보통 가격이 저렴하고 
-                    프라이빗한 공간이 장점이지. 링크에서 추천하는 1인샵 대부분 
-                    후기가 좋아.</p>
-                </details>
-            </div>
+    <article class="scenario">
+      <h3>3️⃣ 대규모·특별 목적·휴양·신체 회복</h3>
+      <p>대규모 인원(5인 이상) 혹은 행사를 위한 “프리미엄 스파 패키지”는 전문 물리치료와 연계된 전신 마사지, 핸드 스크럽, 그리고 개인 맞춤 영양 관리가 포함된다. 최소 120분 이상 예약이 필요하며, 사전 건강 검진을 통해 맞춤형 프로그램을 설계한다.</p>
+      <p>이때는 “전용 라운지”와 “프라이빗 라커룸”을 제공하는 업소를 선택해 프라이버시와 편의성을 확보한다. 또한, 사전 계약서에 환불 및 취소 정책을 명시해 예산 관리의 투명성을 보장한다.</p>
+    </article>
+  </section>
 
-            <div class="faq-item">
-                <details>
-                    <summary>여의도 마사지 받을 때 팁 있어?</summary>
-                    <p>당연하지! 첫 방문이면 <span class="highlight">30분 코스</span>로 
-                    시범 받아보는 것도 방법이야. 그리고 예약할 때 ‘어깨 집중’ 이런 거 
-                    미리 말해두면 좋아. 형들은 다 그렇게 해.</p>
-                </details>
-            </div>
+  <!-- 체크리스트 및 주의사항 -->
+  <section class="checklist-section">
+    <h2>마사지를 선택하기 전 반드시 확인해야 할 체크리스트</h2>
+    <ul>
+      <li>운영 시간과 예약 가능 시간대가 당신의 일정과 맞는가?</li>
+      <li>전문 마사지사의 자격증과 경력은 충분한가?</li>
+      <li>시설 위생 상태와 소독 프로세스는 투명하게 공개되는가?</li>
+      <li>추가 비용(오일, 테라피, 사우나 등) 유무와 사전 안내가 있는가?</li>
+      <li>위치·교통 편의성 및 주차 시설은 충분한가?</li>
+    </ul>
+    <p>위 항목을 하나라도 놓친다면, 그 선택은 불안정한 기반 위에 세워진 것이다. 반드시 사전에 확인하고, 필요 시 전화나 메일로 직접 질문해라. 신뢰를 확인한 뒤에야 비로소 몸과 마음을 맡길 수 있다.</p>
+  </section>
 
-            <div class="faq-item">
-                <details>
-                    <summary>여의도 마사지 가격, 다 비슷해?</summary>
-                    <p>아니야! 같은 60분이어도 5만원대부터 15만원까지 다양해. 
-                    링크에서 <span class="highlight">가격 비교</span> 먼저 하고 
-                    결정해. 돈 아깝지 않게.</p>
-                </details>
-            </div>
+  <!-- FAQ -->
+  <section class="faq-section">
+    <h2>자주 묻는 질문(FAQ)</h2>
+    <dl>
+      <dt>Q1. 예약 후 10분 이내에 취소하면 전액 환불이 가능한가요?</dt>
+      <dd>대부분의 업소가 10분 이내 취소 시 전액 환불을 제공한다. 단, 고급 프리미엄 패키지는 사전 계약서에 별도 조항이 있을 수 있다.</dd>
 
-            <div class="faq-item">
-                <details>
-                    <summary>예약은 꼭 해야 돼?</summary>
-                    <p>웬만하면 예약하고 가는 게 좋아. 특히 퇴근 시간(6~8시)에는 
-                    워크인 받기 어려워. 전화나 카톡으로 미리 잡아놔. 
-                    링크에서 예약 가능한 곳도 많아.</p>
-                </details>
-            </div>
+      <dt>Q2. 남성 전용 마사지와 여성 전용 마사지는 어떻게 구분하나요?</dt>
+      <dd>업소마다 전문 마사지사가 성별에 맞게 배정한다. 남성 전용은 일반적으로 남성 테라피스트가, 여성 전용은 여성 테라피스트가 담당한다. 예약 시 성별 옵션을 명시하면 된다.</dd>
 
-            <div class="faq-item">
-                <details>
-                    <summary>여의도 마사지 추천 샵 있어?</summary>
-                    <p>형, 링크 홈에서 <span class="highlight">베스트 리뷰</span> 
-                    확인해봐. 내가 자주 가는 곳은 ‘스웨디시랩’인데, 분위기도 좋고 
-                    관리사 실력도 좋아. 근데 개인 취향이 있으니까 직접 보고 결정하자.</p>
-                </details>
-            </div>
-        </div>
-    </section>
+      <dt>Q3. 알레르기가 있는데, 특정 오일을 사용하지 않게 할 수 있나요?</dt>
+      <dd>예, 사전 설문에 알레르기 정보를 입력하면 오일 선택을 제한하거나 무오일 옵션을 제공한다. 사전 확인이 핵심이다.</dd>
 
-    <!-- 지역 시그널 섹션 -->
-    <section class="section">
-        <div class="container">
-            <h2>여의도 마사지, 이건 꼭 알아둬</h2>
-            <div class="info-card">
-                <h3>✔ 여의도 마사지 링크만의 시그널</h3>
-                <p>여의도는 금융가라 <span class="highlight">야간 할인</span> 하는 곳도 
-                있고, 주말에
+      <dt>Q4. 출장 시 현장 방문 마사지는 가능한가요?</dt>
+      <dd>여의도 내 일부 고급 스파는 출장 서비스를 제공한다. 사전 상담을 통해 이동 거리와 비용을 조율해야 한다.</dd>
+    </dl>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 여의도 마사지 정보. 모든 권리 보유.</p>
+</footer>
 </body>
 </html>

@@ -1,149 +1,115 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>여의도 마사지 찐 블로그 - 찐후기 & 꿀팁 | 여의도 마사지 링크</title>
-    <meta name="description" content="형들이 직접 경험한 여의도 마사지 찐후기. 여의도 스웨디시, 1인샵 추천부터 가격, 꿀팁까지 싹 다 공개한다. 여의도 마사지 링크 블로그에서 확인하세요.">
-    <meta name="keywords" content="여의도 마사지, 여의도 마사지 링크, 여의도 스웨디시, 여의도 1인샵, 여의도 관리사, 여의도 마사지 추천, 여의도 마사지 가격, 여의도 마사지 블로그">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-neon-void">
-    <link rel="canonical" href="https://t3b06-yd-massage-link-1.vercel.app/blog">
-    <meta property="og:title" content="여의도 마사지 링크 블로그 - 찐후기 & 꿀팁">
-    <meta property="og:description" content="형들이 직접 경험한 여의도 마사지 찐후기. 여의도 스웨디시, 1인샵 추천부터 가격, 꿀팁까지 싹 다 공개한다.">
-    <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { font-size: 16px; scroll-behavior: smooth; }
-        body { font-family: 'Courier New', Courier, monospace; background: #0d0d0d; color: #e0e0e0; line-height: 1.6; min-height: 100vh; }
-        a { color: #ff2a6d; text-decoration: none; border-bottom: 2px solid transparent; transition: all 0.2s ease; }
-        a:hover { border-bottom-color: #ff2a6d; color: #fff; }
-        ul { list-style: none; }
-        img { max-width: 100%; display: block; }
-
-        /* --- BRUTALIST CORE --- */
-        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .section { position: relative; padding: 60px 0; border-top: 3px solid #ff2a6d; margin-top: -2px; }
-        .section::before { content: '◆'; position: absolute; top: -14px; left: 20px; font-size: 1.5rem; color: #ff2a6d; background: #0d0d0d; padding: 0 8px; }
-        h1, h2, h3 { font-weight: 700; text-transform: uppercase; letter-spacing: -1px; }
-        h1 { font-size: 2.8rem; line-height: 1.1; margin-bottom: 20px; color: #fff; text-shadow: 2px 2px 0 #ff2a6d; }
-        h2 { font-size: 2rem; margin-bottom: 30px; color: #ff2a6d; border-left: 6px solid #ff2a6d; padding-left: 15px; }
-        h3 { font-size: 1.4rem; margin-bottom: 15px; color: #f0f0f0; }
-        .btn { display: inline-block; padding: 14px 28px; background: #ff2a6d; color: #0d0d0d; font-weight: bold; text-transform: uppercase; border: 3px solid #ff2a6d; cursor: pointer; transition: all 0.2s ease; letter-spacing: 1px; font-size: 0.9rem; }
-        .btn:hover { background: transparent; color: #ff2a6d; border-color: #ff2a6d; }
-
-        /* --- HEADER / NAV --- */
-        header { position: sticky; top: 0; z-index: 100; background: #0d0d0d; border-bottom: 2px solid #ff2a6d; padding: 10px 0; }
-        .logo { font-size: 1.8rem; font-weight: 900; color: #fff; text-transform: uppercase; letter-spacing: 2px; text-shadow: 2px 2px 0 #ff2a6d; }
-        .logo span { color: #ff2a6d; }
-        header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-        header nav ul { display: flex; gap: 25px; flex-wrap: wrap; }
-        header nav a { font-size: 0.9rem; font-weight: bold; text-transform: uppercase; padding: 5px 0; color: #ccc; border-bottom: 2px solid transparent; }
-        header nav a:hover, header nav a.active { color: #fff; border-bottom-color: #ff2a6d; }
-        .tel-link { font-size: 1.1rem; font-weight: bold; color: #ff2a6d; border: 2px solid #ff2a6d; padding: 6px 14px; transition: 0.2s ease; }
-        .tel-link:hover { background: #ff2a6d; color: #0d0d0d; border-color: #ff2a6d; }
-
-        /* --- 햄버거 메뉴 토글 (모바일) --- */
-        .hamburger-menu { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
-        .hamburger-menu span { display: block; width: 28px; height: 3px; background: #fff; transition: 0.3s ease; }
-        .hamburger-menu.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-        .hamburger-menu.active span:nth-child(2) { opacity: 0; }
-        .hamburger-menu.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
-
-        @media (max-width: 768px) {
-            .hamburger-menu { display: flex; }
-            header nav { display: none; width: 100%; margin-top: 10px; }
-            header nav.open { display: block; }
-            header nav ul { flex-direction: column; gap: 10px; padding: 10px 0; }
-            header nav a { display: block; padding: 8px 0; font-size: 1.1rem; }
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.6rem; }
-            .section { padding: 40px 0; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>여의도 마사지 링크 - 블로그</title>
+  <meta name="description" content="여의도 마사지 업체를 선택하기 전 실무 담당자가 확인해야 할 연락 창구, 인원 변동 대비 방안, 마무리·정산 사전 협의 내용 등 구체적인 체크리스트를 제공합니다.">
+  <meta name="keywords" content="여의도 마사지, 마사지 업체 비교, 실무 담당자 체크리스트, 예약 준비, 서비스 조건">
+  <link rel="canonical" href="https://yeouido-body-review.program-school.online/blog.html">
+  <meta property="og:title" content="여의도 마사지 링크 — 실무 담당자를 위한 준비 체크리스트">
+  <meta property="og:description" content="실무 담당자를 위한 여의도 마사지 업체 선택 전 반드시 확인해야 할 항목들을 상세히 안내합니다.">
+  <meta property="og:url" content="https://yeouido-body-review.program-school.online/blog.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://yeouido-body-review.program-school.online/assets/og-image.jpg">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="r-nav-dfeh">
+    <nav class="m-grid-8l10">
+      <a href="/"><span class="m-img-p1kz">홈</span></a>
+      <a href="/guide"><span class="m-img-p1kz">가이드</span></a>
+      <a href="/faq"><span class="m-img-p1kz">FAQ</span></a>
+      <a href="/contact"><span class="m-img-p1kz">연락처</span></a>
+    </nav>
+    <h1>여의도 마사지 링크 - 블로그</h1>
+  </header>
 
-<header>
-    <div class="container">
-        <div class="logo"><span>◆</span> 여의도 마사지 링크</div>
-        <div class="hamburger-menu" onclick="this.classList.toggle('active'); document.querySelector('header nav').classList.toggle('open');">
-            <span></span><span></span><span></span>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="/">홈</a></li>
-                <li><a href="/blog" class="active">블로그</a></li>
-                <li><a href="/about">소개</a></li>
-                <li><a href="/contact">문의</a></li>
-            </ul>
-        </nav>
-        <a href="tel:010-1234-5678" class="tel-link">📞 전화상담</a>
-    </div>
-</header>
+  <main>
+    <!-- 서론 -->
+    <section class="m-item-rycc">
+      <h2>여의도에서 업무용 마사지를 선택할 때 반드시 검토해야 할 핵심 포인트</h2>
+      <p>
+        대규모 기업이나 공공기관에서는 업무 효율성을 높이기 위해 정기적인 직원 복지를 제공한다. 그 중 하나가 사내 혹은 외부 시설에서 제공되는 마사치다. 여의도 지역에는 다양한 마사지 업체가 존재하나, 실무 담당자가 단순히 가격이나 위치만을 기준으로 선택하면 운영 리스크가 발생할 수 있다. 따라서 계약 전 반드시 확인해야 할 항목을 체계적으로 정리하는 것이 필수적이다.
+      </p>
+      <p>
+        본 블로그에서는 ‘연락 창구’, ‘인원 변동 대비 방안’, ‘마무리·정산 사전 협의’라는 세 가지 축을 중심으로 체크리스트를 제시한다. 각 항목은 실제 현장 운영에서 발생 가능한 위험 요소를 최소화하고, 서비스 퀄리티를 보장하기 위해 세부적으로 구분된다. 이를 통해 실무 담당자는 사전 검증 과정을 간소화하고, 기업 내부 승인 절차를 원활히 진행할 수 있다.
+      </p>
+    </section>
 
-<main class="container">
-    <!-- 블로그 포스트 섹션 -->
-    <section class="section">
-        <h1>여의도 마사지 찐후기<br>내가 직접 가본 곳들</h1>
-        <p style="font-size: 1.1rem; margin-bottom: 30px; color: #bbb; max-width: 800px;">
-            여의도에서 마사지 받을 곳 고민 중인 형들? 내가 직접 발로 뛰어본 찐 후기다. 
-            가격, 관리사 실력, 분위기까지 싹 다 까발린다. 
-            이 글 하나면 여의도 마사지 끝판왕 찾을 수 있을 거야.
-        </p>
+    <!-- 연락 창구 -->
+    <section class="m-item-rycc">
+      <h2>1️⃣ 공식 연락 창구 확보 및 검증</h2>
+      <p>
+        모든 서비스 계약은 명확한 담당자를 지정하고, 해당 담당자의 직통 라인(전화, 이메일, 메신저)을 확보해야 한다. 특히 대규모 예약을 진행할 경우, 예약 담당자와 현장 운영 담당자의 역할을 분리하여 책임소재를 명확히 하는 것이 중요하다. 이를 위해 계약서에 ‘연락 담당자(Primary Contact)’와 ‘비상 연락 담당자(Emergency Contact)’를 별도 명시하고, 양쪽 모두에게 동일한 정보가 전달되는지 확인한다.
+      </p>
+      <p>
+        실무 담당자는 사전 요청서에 연락 창구 검증 절차를 삽입한다. 예를 들어, 24시간 이내 회신이 가능한 이메일 주소와 최소 2개의 휴대전화 번호를 제공받고, 실제 연락 테스트(전화 연결 체크, 이메일 회신 확인)를 수행한다. 이 과정에서 연락 창구가 운영 시간 외에도 차단되지 않는지, 업무 시간 외에도 긴급 상황에 대응 가능한지 여부를 검증한다.
+      </p>
+    </section>
 
-        <article style="background: #1a1a1a; padding: 30px; border-left: 6px solid #ff2a6d; margin-bottom: 40px;">
-            <h2 style="border-left: none; padding-left: 0; font-size: 1.8rem;">#1. 여의도 스웨디시 '루나테라피' – 진짜 힐링 그 자체</h2>
-            <p style="margin-bottom: 15px;">
-                첫 번째로 가본 곳은 여의도 스웨디시로 유명한 <strong>루나테라피</strong>야. 
-                위치는 국회의사당역에서 도보 5분, 건물 외관은 좀 오래됐는데 들어가면 분위기 끝내줘. 
-                실내 조명은 은은하고, 아로마 향이 퍼지니까 바로 긴장 풀리더라.
-            </p>
-            <p style="margin-bottom: 15px;">
-                나는 90분 코스로 받았는데 가격은 9만원. 여의도 물가 생각하면 나쁘지 않았어. 
-                관리사 분 손놀림이 진짜 예술이었어. 특히 어깨랑 두피 마사지가 찐이다. 
-                중간에 잠깐 잠들 뻔했잖아? ㅋㅋㅋ 
-                단점은 예약이 꽉 차있어서 원하는 시간 잡기가 힘들다는 거. 
-                형들도 미리 전화하고 가!
-            </p>
-            <p style="font-weight: bold; color: #ff2a6d;">⭐ 총점: 4.8 / 5.0 – 여의도 스웨디시 원탑</p>
-        </article>
+    <!-- 인원 변동 대비 방안 -->
+    <section class="m-item-rycc">
+      <h2>2️⃣ 인원 변동에 따른 유연한 대응 방안 마련</h2>
+      <p>
+        직원 수는 프로젝트 단계, 시즌별 업무량 등에 따라 급격히 변동될 수 있다. 따라서 마사지 업체는 최소 인원과 최대 인원을 사전에 정의하고, 예약 인원 변동 시 추가 인력 파견 혹은 일정 조정이 가능한 계약 조항을 포함해야 한다. 특히 대규모 행사나 갑작스러운 인원 증가 상황에 대비해 ‘예비 인력 풀(Standby Pool)’을 운영하는 업체를 우선 고려한다.
+      </p>
+      <p>
+        실무 담당자는 ‘인원 변동 시 알림 프로세스’를 구축한다. 예컨대, 인원 변동이 발생하면 48시간 이내에 업체에 통보하고, 업체는 24시간 이내에 추가 인력 배치 가능 여부를 회신하도록 한다. 또한, 변동 상황에 따라 비용 산정이 어떻게 달라지는지 사전에 표준화된 비용표를 확보해 예산 초과 위험을 차단한다.
+      </p>
+    </section>
 
-        <article style="background: #1a1a1a; padding: 30px; border-left: 6px solid #ff2a6d; margin-bottom: 40px;">
-            <h2 style="border-left: none; padding-left: 0; font-size: 1.8rem;">#2. 1인샵 '손길' – 가성비 갑, 혼자 가기 좋아</h2>
-            <p style="margin-bottom: 15px;">
-                다음은 여의도 1인샵 중에서 핫하다는 <strong>손길</strong>이야. 
-                위치는 여의도역 쪽 상가건물 2층. 알바생이 운영하는 곳 아니고, 실제로 관리사 본인이 직접 하는 곳이라 더 믿음이 갔어.
-            </p>
-            <p style="margin-bottom: 15px;">
-                가격은 60분에 6만원, 90분에 8만원. 여의도 1인샵 중에서 진짜 착한 편이지? 
-                관리사님 손이 좀 작은 편인데 오히려 세밀하게 잘 눌러줘. 
-                특히 발 마사지가 끝내줘. 하루 종일 걸어다닌 형들한테 강추한다. 
-                실내는 아담하지만 깔끔하고, 샤워 시설도 완비. 
-                한 가지 팁을 주자면, 관리사님이 조용한 편이라 말 걸기 부담스러울 수 있는데 
-                그냥 편하게 마사지에 집중하면 된다. 나는 오히려 조용해서 좋았어.
-            </p>
-            <p style="font-weight: bold; color: #ff2a6d;">⭐ 총점: 4.5 / 5.0 – 가성비 1인샵 강추</p>
-        </article>
+    <!-- 마무리·정산 사전 협의 -->
+    <section class="m-item-rycc">
+      <h2>3️⃣ 마무리·정산 절차에 대한 사전 합의</h2>
+      <p>
+        서비스 종료 후 정산 과정에서 발생하는 오류는 기업 내부 회계 처리에 큰 영향을 미친다. 따라서 계약 단계에서 ‘정산 시점’, ‘청구서 발행 방식’, ‘지불 조건(선불, 후불, 분할 결제)’ 등을 명확히 규정한다. 특히, 서비스 이용 후 7일 이내에 청구서가 발행되고, 14일 내에 완납되는 절차를 표준화하면 회계팀과의 협업이 수월해진다.
+      </p>
+      <p>
+        추가적으로, 서비스 만족도 조사 결과와 연동된 ‘성과 기반 보상(Performance‑Based Compensation)’ 모델을 도입하면 품질 관리에도 도움이 된다. 예를 들어, 고객 만족도가 90% 이상일 경우 인센티브를 지급하고, 80% 이하인 경우 차감하는 형태를 계약서에 명시한다. 이런 조항은 업체의 서비스 품질을 지속적으로 관리하게 만든다.
+      </p>
+    </section>
 
-        <article style="background: #1a1a1a; padding: 30px; border-left: 6px solid #ff2a6d; margin-bottom: 40px;">
-            <h2 style="border-left: none; padding-left: 0; font-size: 1.8rem;">#3. 여의도 마사지 추천 리스트 (가격비교)</h2>
-            <p style="margin-bottom: 15px;">
-                형들, 여의도 마사지 찾을 때 가격 때문에 고민 많이 하잖아? 
-                내가 직접 알아본 곳들 가격대 정리해줬다.
-            </p>
-            <ul style="margin-bottom: 20px; padding-left: 20px; list-style: disc; color: #ccc;">
-                <li><strong>루나테라피</strong> (스웨디시) – 90분 9만원 ~ 120분 12만원</li>
-                <li><strong>손길</strong> (1인샵) – 60분 6만원 ~ 90분 8만원</li>
-                <li><strong>더힐링샵</strong> (건식/아로마) – 60분 5만원 ~ 90분 7만원</li>
-                <li><strong>여의도테라피</strong> (스포츠마사지) – 60분 7만원 ~ 90분 10만원</li>
-            </ul>
-            <p>
-                여의도 마사지 가격대는 보통 5~12만원 정도 형성되어 있더라. 
-                내 경험으로는 8~9만원대 코스가 가장 무난하고 효과 좋았어. 
-                너무 싼 곳은 피하는 게 좋고, 너무 비싼 곳은 관리사 경력에 따라 차이 있음.
-            </p>
-        </article>
+    <!-- 상황별 체크리스트 확장 -->
+    <section class="m-item-rycc">
+      <h2>4️⃣ 상황별 추가 체크리스트</h2>
+      <p>
+        <strong>① 출장·현장 방문 시</strong> : 현장 접근성(엘리베이터, 주차장), 보안 규정(출입증) 및 현장 사전 점검 일정을 반드시 포함한다. 또한, 업체가 현장 내에서 발생할 수 있는 사고에 대비한 보험 가입 여부도 확인한다.
+      </p>
+      <p>
+        <strong>② 장기 계약(6개월 이상) 시</strong> : 정기적인 서비스 품질 점검 회의를 월 1회 이상 진행하고, 계약 연장 여부를 사전 검토한다. 서비스 만족도, 비용 효율성, 인력 가용성 등을 종합적으로 평가하는 기준표를 마련한다.
+      </p>
+      <p>
+        <strong>③ 비상 상황(대규모 재해, 코로나19 등) 대비</strong> : 온라인 원격 마사지(테라피 가이드) 제공 여부와 비대면 결제 시스템 도입 여부를 검토한다. 이런 옵션은 비상 상황에서도 복지 서비스를 지속할 수 있게 한다.
+      </p>
+    </section>
 
-        <!-- FAQ 섹션 (블로그 내부) -->
+    <!-- FAQ -->
+    <section class="m-item-rycc">
+      <h2>FAQ</h2>
+      <dl>
+        <dt>Q1. 마사지 업체와 계약 시, 사전 현장 검증은 필수인가요?</dt>
+        <dd>네. 현장 방문을 통해 시설 위생 상태, 마사지 기구 보유 현황, 직원 자격증 확인을 반드시 진행해야 합니다.</dd>
+        <dt>Q2. 인원 변동에 따라 비용이 크게 변동될 수 있는데, 어떻게 대비해야 하나요?</dt>
+        <dd>인원 변동 시 적용되는 추가 비용 비율을 사전에 고정하고, 변동 예상 시뮬레이션을 통해 예산 초과 위험을 최소화합니다.</dd>
+        <dt>Q3. 서비스 종료 후 정산 오류를 방지하려면 어떤 절차가 필요하나요?</dt>
+        <dd>청구서 발행 일자와 결제 기한을 계약서에 명시하고, 회계팀과 사전 검토 회의를 통해 정확한 비용 산정 로직을 공유합니다.</dd>
+      </dl>
+    </section>
+
+    <!-- 결론 -->
+    <section class="m-item-rycc">
+      <h2>맺음말</h2>
+      <p>
+        여의도 지역에서 업무용 마사지를 도입하려는 기업은 단순히 가격 대비 서비스를 선택하기보다, 전반적인 운영 리스크를 최소화할 수 있는 체계적인 체크리스트를 기반으로 업체를 선정해야 한다. 본 블로그에서 제시한 ‘연락 창구’, ‘인원 변동 대비 방안’, ‘마무리·정산 사전 협의’ 세 축은 실무 담당자가 현장에서 바로 적용 가능한 실용적 가이드다.
+      </p>
+      <p>
+        향후 여의도 마사지 시장이 더욱 성장함에 따라, 서비스 품질과 비용 효율성을 동시에 확보하는 것이 기업 복지 정책의 핵심이 될 것이다. 따라서 지속적인 모니터링과 정기적인 체크리스트 업데이트를 통해 장기적인 파트너십을 구축하는 것이 바람직하다.
+      </p>
+    </section>
+  </main>
+
+  <footer class="r-nav-dfeh">
+    <p>© 2026 여의도 마사지 링크 블로그. All rights reserved.</p>
+  </footer>
 </body>
 </html>
